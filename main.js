@@ -1,44 +1,44 @@
 var typeOfCalculator = prompt("Enter a for an advance calculator and b for a basic calculator");
 
-var number1 = parseFloat(prompt("Enter first number: "));
+var num1 = parseFloat(prompt("First number?: "));
 
 var answer;
 
 if(typeOfCalculator == "a") {
   var operation = prompt("Type pow for power and sqr for square root");
 } else if (typeOfCalculator == "b") {
-  var operation = prompt("what operation: +-*/");
+  var operation = prompt("what operation?: +-*/");
 } else {
   console.log("Invalid option.");
 }
 
-if(operation == + || operation == - || operation == * || operation == / || operation == ^) {
-  var number2 = parseFloat(prompt("Enter second number: "));
+if(operation == "+" || operation == "-" || operation == "*" || operation == "/" || operation == "pow") {
+  var num2 = parseFloat(prompt("Second number?: "));
 
 switch (operation) {
   case "+":
-    answer = number1 + number2;
+    answer = num1 + num2;
     break;
   case "-":
-    answer = number1 - number2;
+    answer = num1 - num2;
     break;
   case "*":
-    answer = number1 * number2;
+    answer = num1 * num2;
     break;
   case "/":
-    answer = number1 / number2;
+    answer = num1 / num2;
     break;
   case "^":
-    answer = Math.pow(number1, number2);
+    answer = Math.pow(num1, num2);
     break;
   case "sqrt":
-    answer = Math.sqrt(number1);
+    answer = Math.sqrt(num1);
     break;
   default:
     break;
 }
 
-alert(number1 + " " + operation + " " + number2 + " = " + answer);
+alert(num1 + " " + operation + " " + num2 + " = " + answer);
 
 
 
